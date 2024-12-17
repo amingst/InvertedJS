@@ -2,11 +2,14 @@
   "name": "invertedjs",
   "version": "1.0.0",
   "main": "./dist/index.js",
+  "repository": {
+    "url": "https://github.com/amingst/InvertedJS"
+  },
   "scripts": {
     "build": "rollup -c",
     "test": "npx jest"
   },
-  "author": "Andrew Mingst",
+  "author": "Andrew Mingst <github:amingst>",
   "license": "ISC",
   "description": "Library for interacting with the InvertedTech backend from a nodejs environment",
   "dependencies": {
