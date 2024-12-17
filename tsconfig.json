@@ -1,26 +1,30 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",                     // Target ES version, you can set this based on your compatibility needs
-    "module": "ESNext",                      // Use ESNext or CommonJS, depending on your module system
-    "lib": ["ES2020"],                       // Includes standard library types
-    "declaration": true,                     // Generate .d.ts files for type definitions
-    "declarationMap": true,                  // Map .d.ts files to source for easier debugging
-    "sourceMap": true,                       // Generates .map files for debugging
-    "outDir": "./dist",                      // The output directory for compiled files
-    "rootDir": "./src",                      // The root directory for your TypeScript source files
-    "esModuleInterop": true,                 // Ensures proper interop with CommonJS modules
-    "skipLibCheck": true,                    // Skips type checking of declaration files (faster builds)
-    "strict": true,                          // Enables all strict type-checking options
-    "resolveJsonModule": true,               // Allows importing JSON files as modules
-    "moduleResolution": "node",              // Resolves modules similar to Node.js resolution
-    "allowSyntheticDefaultImports": true,     // Allows default imports from modules that do not have them
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src/**/*.ts"                            // Include all .ts files in the src directory
-  ],
-  "exclude": [
-    "node_modules",                          // Exclude the node_modules directory
-    "dist"                                   // Exclude the output directory
-  ]
+	"compilerOptions": {
+		"target": "ES2020", // Target ES version, you can set this based on your compatibility needs
+		"module": "ESNext", // Use ESNext or CommonJS, depending on your module system
+		"lib": ["ES2020"], // Includes standard library types
+		"declaration": true, // Generate .d.ts files for type definitions
+		"declarationMap": true, // Map .d.ts files to source for easier debugging
+		"sourceMap": true, // Generates .map files for debugging
+		"outDir": "./dist", // The output directory for compiled files
+		"rootDir": "./src", // The root directory for your TypeScript source files
+		"esModuleInterop": true, // Ensures proper interop with CommonJS modules
+		"skipLibCheck": true, // Skips type checking of declaration files (faster builds)
+		"strict": true, // Enables all strict type-checking options
+		"resolveJsonModule": true, // Allows importing JSON files as modules
+		"moduleResolution": "node", // Resolves modules similar to Node.js resolution
+		"allowSyntheticDefaultImports": true, // Allows default imports from modules that do not have them
+		"jsx": "react-jsx",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": [
+		"src/**/*.ts" // Include all .ts files in the src directory
+	],
+	"exclude": [
+		"node_modules", // Exclude the node_modules directory
+		"dist", // Exclude the output directory,
+		"src/**/*.spec.ts"
+	]
 }
