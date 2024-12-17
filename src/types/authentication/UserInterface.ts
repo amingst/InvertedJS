@@ -1,12 +1,31 @@
 import { RecordResponse } from "../base";
 import { UserNormalRecord, UserPublicRecord } from "./UserRecord";
 
+/**
+ * @typedef {Object} AuthenticateUserRequest
+ * @property {string} UserName - An InvertedTech User's UserName
+ * @property {string} Password - An InvertedTech User's Password
+ * @property {string} MFACode - The InvertedTech User's MFACode (If Enabled)
+ * @example
+ * ```
+ * const req: AuthenticateUserRequest = {
+ *  UserName: "jdoe",
+ *  Password: "example",
+ *  MFACode: ""     // If MFA is not enabled, leave this as a blank string
+ * };
+ * ```
+ */
 export interface AuthenticateUserRequest {
     UserName: string;
     Password: string;
     MFACode: string;
 }
 
+/**
+ * @typedef {Object} AuthenticateUserResponse
+ * @property {string} BearerToken - The JWT returned from a successful response
+ * @property {UserNormalRecord} User - The Stored Record Of the user returned on a successful response
+ */
 export interface AuthenticateUserResponse {
     BearerToken: string;
     User: UserNormalRecord;

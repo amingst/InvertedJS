@@ -1,13 +1,16 @@
 {
   "name": "invertedtech",
   "version": "0.1.1",
-  "main": "./dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "url": "https://github.com/amingst/InvertedJS"
   },
   "scripts": {
     "build": "rollup -c",
-    "test": "npx jest"
+    "test": "npx jest",
+    "docs": "npx typedoc --entryPointStrategy Expand src"
   },
   "author": "Andrew Mingst <github:amingst>",
   "license": "ISC",
@@ -17,7 +20,6 @@
     "react": "^19.0.0",
     "typescript": "^5.7.2"
   },
-  "types": "./dist/index.d.ts",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@types/jest": "^29.5.14",

@@ -6,7 +6,7 @@ module.exports = {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/index.js',
+      file: 'dist/index.cjs.js',
       format: 'cjs',
       sourcemap: true,
     },
