@@ -1,5 +1,6 @@
 import { UserNotificationSettingsNormalRecord, UserNotificationSettingsRecord } from "./UserNotificationSettingsRecord";
 
+// TODO: Document
 export interface GetAllTokensRequest {
     IncludeDisabledPush: boolean;
 }
