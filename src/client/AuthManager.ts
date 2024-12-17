@@ -1,4 +1,7 @@
-import { AuthenticateUserRequest, AuthenticateUserResponse } from '../types';
+import {
+	AuthenticateUserRequest,
+	AuthenticateUserResponse,
+} from '@/types/authentication';
 import { BaseManager } from '@/types/base';
 
 /**

@@ -1,26 +1,29 @@
-import { PaypalSubscriptionFullRecord, PaypalSubscriptionRecord } from "./PaypalSubscriptionRecord";
+import {
+	PaypalSubscriptionFullRecord,
+	PaypalSubscriptionRecord,
+} from './PaypalSubscriptionRecord';
 
-export interface PaypalCancelOwnSubscriptionRequest {
-    SubscriptionID: string;
-    Reason: string;
-}
+export type PaypalCancelOwnSubscriptionRequest = {
+	SubscriptionID: string;
+	Reason: string;
+};
 
-export interface PaypalCancelOwnSubscriptionResponse {
-    Record: PaypalSubscriptionRecord;
-    Error: string;
-}
+export type PaypalCancelOwnSubscriptionResponse = {
+	Record: PaypalSubscriptionRecord;
+	Error: string;
+};
 
-export interface PaypalGetOwnSubscriptionRequest {}
+export type PaypalGetOwnSubscriptionRequest = {};
 
-export interface PaypalGetOwnSubscriptionResponse {
-    Records: PaypalSubscriptionFullRecord[]
-}
+export type PaypalGetOwnSubscriptionResponse = {
+	Records: PaypalSubscriptionFullRecord[];
+};
 
-export interface PaypalNewOwnSubscriptionRequest {
-    PaypalSubscriptionId: string;
-}
+export type PaypalNewOwnSubscriptionRequest = {
+	PaypalSubscriptionId: string;
+};
 
-export interface PaypalNewOwnSubscriptionResponse {
-    Record: PaypalSubscriptionRecord;
-    Error: string;
-}
+export type PaypalNewOwnSubscriptionResponse = {
+	Record: PaypalSubscriptionRecord;
+	Error: string;
+};

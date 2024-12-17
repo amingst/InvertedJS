@@ -6,18 +6,18 @@
  * @property {string} BodyPlain - Plaintext email body
  * @property {string} BodyHtml - HTML Email Body
  */
-export interface SendEmailRequest {
-    SendToAddress: string;
-    Subject: string;
-    BodyPlain: string;
-    BodyHtml: string;
-}
+export type SendEmailRequest = {
+	SendToAddress: string;
+	Subject: string;
+	BodyPlain: string;
+	BodyHtml: string;
+};
 
 /**
  * Response Object For Sending An Automatic Email
  * @typedef {object} SendEmailResponse
  * @property {string} Error - The error preventing the request from completing (if failed)
  */
-export interface SendEmailResponse {
-    Error: string;
-}
+export type SendEmailResponse = {
+	Error: string;
+};

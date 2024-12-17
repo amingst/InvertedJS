@@ -1,1 +1,1 @@
-export * from './inverted-context';
+export { InvertedProvider, InvertedContext } from './inverted-context';

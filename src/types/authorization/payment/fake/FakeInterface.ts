@@ -1,53 +1,53 @@
-import { FakeSubscriptionRecord } from "./FakeSubscriptionRecord";
+import { FakeSubscriptionRecord } from './FakeSubscriptionRecord';
 
-export interface FakeCancelOtherSubscriptionRequest {
-    UserId: string;
-    Reason: string;
-}
+export type FakeCancelOtherSubscriptionRequest = {
+	UserId: string;
+	Reason: string;
+};
 
-export interface FakeCancelOtherSubscriptionResponse {
-    Record: FakeSubscriptionRecord
-    Error: string;
-}
+export type FakeCancelOtherSubscriptionResponse = {
+	Record: FakeSubscriptionRecord;
+	Error: string;
+};
 
-export interface FakeCancelOwnSubscriptionRequest {
-    Reason: string;
-}
+export type FakeCancelOwnSubscriptionRequest = {
+	Reason: string;
+};
 
-export interface FakeCancelOwnSubscriptionResponse {
-    Record: FakeSubscriptionRecord;
-    Error: string;
-}
+export type FakeCancelOwnSubscriptionResponse = {
+	Record: FakeSubscriptionRecord;
+	Error: string;
+};
 
-export interface FakeGetOtherSubscriptionRecordRequest {
-    UserId: string;
-}
+export type FakeGetOtherSubscriptionRecordRequest = {
+	UserId: string;
+};
 
-export interface FakeGetOtherSubscriptionRecordResponse {
-    Record: FakeSubscriptionRecord;
-}
+export type FakeGetOtherSubscriptionRecordResponse = {
+	Record: FakeSubscriptionRecord;
+};
 
-export interface FakeGetOwnSubscriptionRecordRequest {}
+export type FakeGetOwnSubscriptionRecordRequest = {};
 
-export interface FakeGetOwnSubscriptionRecordResponse {
-    Record: FakeSubscriptionRecord;
-}
+export type FakeGetOwnSubscriptionRecordResponse = {
+	Record: FakeSubscriptionRecord;
+};
 
-export interface FakeNewOtherSubscriptionRequest {
-    UserId: string;
-    AmountCents: number;
-}
+export type FakeNewOtherSubscriptionRequest = {
+	UserId: string;
+	AmountCents: number;
+};
 
-export interface FakeNewOtherSubscriptionResponse {
-    Record: FakeSubscriptionRecord;
-    Error: string;
-}
+export type FakeNewOtherSubscriptionResponse = {
+	Record: FakeSubscriptionRecord;
+	Error: string;
+};
 
-export interface FakeNewOwnSubscriptionRequest {
-    AmountCents: number;
-}
+export type FakeNewOwnSubscriptionRequest = {
+	AmountCents: number;
+};
 
-export interface FakeNewOwnSubscriptionResponse {
-    Record: FakeSubscriptionRecord;
-    Error: string;
-}
+export type FakeNewOwnSubscriptionResponse = {
+	Record: FakeSubscriptionRecord;
+	Error: string;
+};

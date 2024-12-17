@@ -1,16 +1,16 @@
 import React, { createContext, useMemo } from 'react';
 import { InvertedClient } from '../client/InvertedClient';
 
-export interface IInvertedContext {
+export type InvertedContext = {
 	client: InvertedClient;
-}
+};
 
 export type ContextProviderProps = React.PropsWithChildren<{
 	baseUrl: string;
 	token?: string;
 }>;
 
-export const InvertedContext = createContext<IInvertedContext | undefined>(
+export const InvertedContext = createContext<InvertedContext | undefined>(
 	undefined
 );
 

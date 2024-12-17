@@ -1,32 +1,35 @@
-import { BitcoinPaymentHistoryRecord, BitcoinSubscriptionRecord } from "./BitcoinRecords";
+import {
+	BitcoinPaymentHistoryRecord,
+	BitcoinSubscriptionRecord,
+} from './BitcoinRecords';
 
-export interface GetAdminBalanceRequest {}
+export type GetAdminBalanceRequest = {};
 
-export interface GetAdminBalanceResponse {
-    Satoshis: number;
-    ValueUSD: number;
-}
+export type GetAdminBalanceResponse = {
+	Satoshis: number;
+	ValueUSD: number;
+};
 
-export interface CheckForPaymentRequest {}
+export type CheckForPaymentRequest = {};
 
-export interface CheckForPaymentResponse {
-    LastRecord: BitcoinPaymentHistoryRecord;
-    Error: string;
-}
+export type CheckForPaymentResponse = {
+	LastRecord: BitcoinPaymentHistoryRecord;
+	Error: string;
+};
 
-export interface GetHistoryRecordsRequest {}
+export type GetHistoryRecordsRequest = {};
 
-export interface GetHistoryRecordsResponse {
-    Records: BitcoinPaymentHistoryRecord[]
-}
+export type GetHistoryRecordsResponse = {
+	Records: BitcoinPaymentHistoryRecord[];
+};
 
-export interface GetPaymentStatusRequest {}
+export type GetPaymentStatusRequest = {};
 
-export interface GetPaymentStatusResponse {
-    Subscription: BitcoinSubscriptionRecord;
-    LastPayment: BitcoinPaymentHistoryRecord
-}
+export type GetPaymentStatusResponse = {
+	Subscription: BitcoinSubscriptionRecord;
+	LastPayment: BitcoinPaymentHistoryRecord;
+};
 
-export interface SetSubscriptionLevelRequest {
-    Level: number;
-}
+export type SetSubscriptionLevelRequest = {
+	Level: number;
+};

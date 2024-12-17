@@ -1,1 +1,1 @@
-export { InvertedClient } from './InvertedClient'
+export { InvertedClient } from './InvertedClient';

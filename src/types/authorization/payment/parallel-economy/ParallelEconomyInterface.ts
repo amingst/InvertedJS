@@ -1,33 +1,33 @@
-import { ParallelEconomySubscriptionRecord } from "./ParallelEconomySubscriptionRecord";
-import { PlanList } from "./PlanRecord";
+import { ParallelEconomySubscriptionRecord } from './ParallelEconomySubscriptionRecord';
+import { PlanList } from './PlanRecord';
 
-export interface CancelOwnSubscriptionRequest {
-    Reason: string;
-}
+export type CancelOwnSubscriptionRequest = {
+	Reason: string;
+};
 
-export interface CancelOwnSubscriptionResponse {
-    Record: ParallelEconomySubscriptionRecord;
-    Error: string;
-}
+export type CancelOwnSubscriptionResponse = {
+	Record: ParallelEconomySubscriptionRecord;
+	Error: string;
+};
 
-export interface GetAccountDetailsRequest {}
+export type GetAccountDetailsRequest = {};
 
-export interface GetAccountDetailsResponse {
-    Plans: PlanList;
-    IsTest:boolean;
-}
+export type GetAccountDetailsResponse = {
+	Plans: PlanList;
+	IsTest: boolean;
+};
 
-export interface GetOwnSubscriptionRecordRequest {}
+export type GetOwnSubscriptionRecordRequest = {};
 
-export interface GetOwnSubscriptionRecordResponse {
-    Record: ParallelEconomySubscriptionRecord
-}
+export type GetOwnSubscriptionRecordResponse = {
+	Record: ParallelEconomySubscriptionRecord;
+};
 
-export interface NewOwnSubscriptionRequest {
-    TransactionId: string;
-}
+export type NewOwnSubscriptionRequest = {
+	TransactionId: string;
+};
 
-export interface NewOwnSubscriptionResponse {
-    Record: ParallelEconomySubscriptionRecord;
-    Error: string;
-}
+export type NewOwnSubscriptionResponse = {
+	Record: ParallelEconomySubscriptionRecord;
+	Error: string;
+};

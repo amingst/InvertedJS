@@ -1,24 +1,24 @@
 import React, { useContext } from 'react';
 
-export interface IContextWrapperConfig {
-    context: string;
-    provider: string;
-}
+export type ContextWrapperConfig = {
+	context: string;
+	provider: string;
+};
 
-const useTypedContext = <T,>(
-    context: React.Context<T>,
-    config: IContextWrapperConfig
+const useTypedContext = <T>(
+	context: React.Context<T>,
+	config: ContextWrapperConfig
 ) => {
-    const ctx = useContext(context);
-    const { context: contextName, provider: providerName } = config;
+	const ctx = useContext(context);
+	const { context: contextName, provider: providerName } = config;
 
-    if (!ctx) {
-        throw new Error(
-            `${contextName} must only be called within the bounds of the provider ${providerName}`
-        );
-    }
+	if (!ctx) {
+		throw new Error(
+			`${contextName} must only be called within the bounds of the provider ${providerName}`
+		);
+	}
 
-    return ctx;
+	return ctx;
 };
 
 export default useTypedContext;

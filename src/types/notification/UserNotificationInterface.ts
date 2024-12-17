@@ -1,40 +1,43 @@
-import { UserNotificationSettingsNormalRecord, UserNotificationSettingsRecord } from "./UserNotificationSettingsRecord";
+import {
+	UserNotificationSettingsNormalRecord,
+	UserNotificationSettingsRecord,
+} from './UserNotificationSettingsRecord';
 
 // TODO: Document
-export interface GetAllTokensRequest {
-    IncludeDisabledPush: boolean;
-}
+export type GetAllTokensRequest = {
+	IncludeDisabledPush: boolean;
+};
 
-export interface GetAllTokensResponse {
-    TokenIDs: string[];
-}
+export type GetAllTokensResponse = {
+	TokenIDs: string[];
+};
 
-export interface GetRecordRequest {}
+export type GetRecordRequest = {};
 
-export interface GetRecordResponse {
-    Record: UserNotificationSettingsRecord;
-}
+export type GetRecordResponse = {
+	Record: UserNotificationSettingsRecord;
+};
 
-export interface ModifyNormalRecordRequest {
-    Record: UserNotificationSettingsNormalRecord
-}
+export type ModifyNormalRecordRequest = {
+	Record: UserNotificationSettingsNormalRecord;
+};
 
-export interface ModifyNormalRecordResponse {
-    Error: string;
-}
+export type ModifyNormalRecordResponse = {
+	Error: string;
+};
 
-export interface RegisterNewTokenRequest {
-    TokenID: string;
-}
+export type RegisterNewTokenRequest = {
+	TokenID: string;
+};
 
-export interface RegisterNewTokenResponse {
-    Error: string;
-}
+export type RegisterNewTokenResponse = {
+	Error: string;
+};
 
-export interface UnRegisterNewTokenRequest {
-    TokenID: string;
-}
+export type UnRegisterNewTokenRequest = {
+	TokenID: string;
+};
 
-export interface UnRegisterNewTokenResponse {
-    Error: string;
-}
+export type UnRegisterNewTokenResponse = {
+	Error: string;
+};

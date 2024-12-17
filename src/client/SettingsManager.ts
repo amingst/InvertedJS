@@ -1,4 +1,4 @@
-import { GetPublicDataResponse } from '../types/settings/SettingsInterface';
+import { GetPublicDataResponse } from '@/types/settings';
 import { BaseManager } from '@/types/base';
 /**
  * Manager Service for the InvertedTech settings api

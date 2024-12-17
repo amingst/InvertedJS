@@ -1,174 +1,189 @@
-import { CMSOwnerRecord, CMSPrivateRecord, CMSPublicRecord, CommentsOwnerRecord, CommentsPrivateRecord, CommentsPublicRecord, NotificationOwnerRecord, NotificationPrivateRecord, NotificationPublicRecord, PersonalizationOwnerRecord, PersonalizationPrivateRecord, PersonalizationPublicRecord, SettingsOwnerData, SettingsPrivateData, SettingsPublicData, SubscriptionOwnerRecord, SubscriptionPrivateRecord, SubscriptionPublicRecord } from "./SettingsRecord";
+import { ModifyResponseErrorType } from '../errors';
+import {
+	CMSOwnerRecord,
+	CMSPrivateRecord,
+	CMSPublicRecord,
+	CommentsOwnerRecord,
+	CommentsPrivateRecord,
+	CommentsPublicRecord,
+	NotificationOwnerRecord,
+	NotificationPrivateRecord,
+	NotificationPublicRecord,
+	PersonalizationOwnerRecord,
+	PersonalizationPrivateRecord,
+	PersonalizationPublicRecord,
+	SettingsOwnerData,
+	SettingsPrivateData,
+	SettingsPublicData,
+	SubscriptionOwnerRecord,
+	SubscriptionPrivateRecord,
+	SubscriptionPublicRecord,
+} from './SettingsRecord';
 
-export interface GetPublicDataRequest {}
+export type GetPublicDataRequest = {};
 
-export interface GetPublicDataResponse {
-    Public: SettingsPublicData;
-}
+export type GetPublicDataResponse = {
+	Public: SettingsPublicData;
+};
 
-export interface GetPublicNewerDataRequest {
-    VersionNum: number;
-}
+export type GetPublicNewerDataRequest = {
+	VersionNum: number;
+};
 
-export interface GetPublicNewerDataResponse {
-    Public: SettingsPublicData;
-}
+export type GetPublicNewerDataResponse = {
+	Public: SettingsPublicData;
+};
 
-export interface GetAdminDataRequest {}
+export type GetAdminDataRequest = {};
 
-export interface GetAdminDataResponse {
-    Public: SettingsPublicData;
-    Private: SettingsPrivateData;
-}
+export type GetAdminDataResponse = {
+	Public: SettingsPublicData;
+	Private: SettingsPrivateData;
+};
 
-export interface GetAdminNewerDataRequest {
-    VersionNum: number;
-}
+export type GetAdminNewerDataRequest = {
+	VersionNum: number;
+};
 
-export interface GetAdminNewerDataResponse {
-    Public: SettingsPublicData;
-    Private: SettingsPrivateData;
-}
+export type GetAdminNewerDataResponse = {
+	Public: SettingsPublicData;
+	Private: SettingsPrivateData;
+};
 
-export interface GetOwnerDataRequest {}
+export type GetOwnerDataRequest = {};
 
-export interface GetOwnerDataResponse {
-    Public: SettingsPublicData;
-    Private: SettingsPrivateData;
-    Owner: SettingsOwnerData
-}
+export type GetOwnerDataResponse = {
+	Public: SettingsPublicData;
+	Private: SettingsPrivateData;
+	Owner: SettingsOwnerData;
+};
 
-export interface GetOwnerNewerDataRequest {
-    VersionNum: number;
-}
+export type GetOwnerNewerDataRequest = {
+	VersionNum: number;
+};
 
-export interface GetOwnerNewerDataResponse {
-    Public: SettingsPublicData;
-    Private: SettingsPrivateData;
-    Owner: SettingsOwnerData
-}
+export type GetOwnerNewerDataResponse = {
+	Public: SettingsPublicData;
+	Private: SettingsPrivateData;
+	Owner: SettingsOwnerData;
+};
 
-export enum ModifyResponseErrorType {
-    NoError = 0,
-    UnknownError = -1
-}
+export type ModifyCMSPublicDataRequest = {
+	Data: CMSPublicRecord;
+};
 
-export interface ModifyCMSPublicDataRequest {
-    Data: CMSPublicRecord;
-}
+export type ModifyCMSPublicDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyCMSPublicDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyCMSPrivateDataRequest = {
+	Data: CMSPrivateRecord;
+};
 
-export interface ModifyCMSPrivateDataRequest {
-    Data: CMSPrivateRecord;
-}
+export type ModifyCMSPrivateDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyCMSPrivateDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyCMSOwnerDataRequest = {
+	Data: CMSOwnerRecord;
+};
 
-export interface ModifyCMSOwnerDataRequest {
-    Data: CMSOwnerRecord;
-}
+export type ModifyCMSOwnerDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyCMSOwnerDataResponse {
-    Error: ModifyResponseErrorType
-}
+export type ModifyPersonalizationPublicDataRequest = {
+	Data: PersonalizationPublicRecord;
+};
 
-export interface ModifyPersonalizationPublicDataRequest {
-    Data: PersonalizationPublicRecord;
-}
+export type ModifyPersonalizationPublicDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyPersonalizationPublicDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyPersonalizationPrivateDataRequest = {
+	Data: PersonalizationPrivateRecord;
+};
 
-export interface ModifyPersonalizationPrivateDataRequest {
-    Data: PersonalizationPrivateRecord;
-}
+export type ModifyPersonalizationPrivateDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyPersonalizationPrivateDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyPersonalizationOwnerDataRequest = {
+	Data: PersonalizationOwnerRecord;
+};
 
-export interface ModifyPersonalizationOwnerDataRequest {
-    Data: PersonalizationOwnerRecord;
-}
+export type ModifyPersonalizationOwnerDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyPersonalizationOwnerDataResponse {
-    Error: ModifyResponseErrorType
-}
+export type ModifySubscriptionPublicDataRequest = {
+	Data: SubscriptionPublicRecord;
+};
 
-export interface ModifySubscriptionPublicDataRequest {
-    Data: SubscriptionPublicRecord;
-}
+export type ModifySubscriptionPublicDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifySubscriptionPublicDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifySubscriptionPrivateDataRequest = {
+	Data: SubscriptionPrivateRecord;
+};
 
-export interface ModifySubscriptionPrivateDataRequest {
-    Data: SubscriptionPrivateRecord;
-}
+export type ModifySubscriptionPrivateDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifySubscriptionPrivateDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifySubscriptionOwnerDataRequest = {
+	Data: SubscriptionOwnerRecord;
+};
 
-export interface ModifySubscriptionOwnerDataRequest {
-    Data: SubscriptionOwnerRecord;
-}
+export type ModifySubscriptionOwnerDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifySubscriptionOwnerDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyCommentsPublicDataRequest = {
+	Data: CommentsPublicRecord;
+};
 
-export interface ModifyCommentsPublicDataRequest {
-    Data: CommentsPublicRecord;
-}
+export type ModifyCommentsPublicDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyCommentsPublicDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyCommentsPrivateDataRequest = {
+	Data: CommentsPrivateRecord;
+};
 
-export interface ModifyCommentsPrivateDataRequest {
-    Data: CommentsPrivateRecord;
-}
+export type ModifyCommentsPrivateDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyCommentsPrivateDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyCommentsOwnerDataRequest = {
+	Data: CommentsOwnerRecord;
+};
 
-export interface ModifyCommentsOwnerDataRequest {
-    Data: CommentsOwnerRecord;
-}
+export type ModifyCommentsOwnerDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyCommentsOwnerDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyNotificationPublicDataRequest = {
+	Data: NotificationPublicRecord;
+};
 
-export interface ModifyNotificationPublicDataRequest {
-    Data: NotificationPublicRecord;
-}
+export type ModifyNotificationPublicDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyNotificationPublicDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyNotificationPrivateDataRequest = {
+	Data: NotificationPrivateRecord;
+};
 
-export interface ModifyNotificationPrivateDataRequest {
-    Data: NotificationPrivateRecord;
-}
+export type ModifyNotificationPrivateDataResponse = {
+	Error: ModifyResponseErrorType;
+};
 
-export interface ModifyNotificationPrivateDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyNotificationOwnerDataRequest = {
+	Data: NotificationOwnerRecord;
+};
 
-export interface ModifyNotificationOwnerDataRequest {
-    Data: NotificationOwnerRecord;
-}
-
-export interface ModifyNotificationOwnerDataResponse {
-    Error: ModifyResponseErrorType;
-}
+export type ModifyNotificationOwnerDataResponse = {
+	Error: ModifyResponseErrorType;
+};

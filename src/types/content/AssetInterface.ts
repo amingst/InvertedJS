@@ -1,77 +1,81 @@
-import { RecordResponse } from "../base";
-import { AssetRecord } from "./AssetRecord";
-import { AudioAssetData, AudioAssetPublicRecord } from "./AudioAssetRecord";
-import { ImageAssetData, ImageAssetPublicRecord } from "./ImageAssetRecord";
+import { RecordResponse } from '../base';
+import { AssetRecord } from './AssetRecord';
+import { AudioAssetData, AudioAssetPublicRecord } from './AudioAssetRecord';
+import { ImageAssetData, ImageAssetPublicRecord } from './ImageAssetRecord';
 
 export enum AssetType {
-    None = 0,
-    Audio = 1,
-    Image = 2,
+	None = 0,
+	Audio = 1,
+	Image = 2,
 }
 
 export type AssetListRecord = {
-    AssetID: string;
-    CreatedOnUTC: string;
-    Title: string;
-    Caption: string;
-    AssetType: AssetType;
-    Height: number;
-    Width: number;
-    LengthSeconds: number;
-}
-
-export interface CreateAssetRequest {
-    CreateAssetRequest_oneof: {Audio: AudioAssetData} | {Image: ImageAssetData}
-}
-
-export interface CreateAssetResponse {
-    Record: AssetRecord
-}
-
-export interface GetAssetRequest {
-    AssetID: string
+	AssetID: string;
+	CreatedOnUTC: string;
+	Title: string;
+	Caption: string;
+	AssetType: AssetType;
+	Height: number;
+	Width: number;
+	LengthSeconds: number;
 };
 
-export interface GetAssetResponse {
-    GetAssetResponse_oneof: {Audio: AudioAssetPublicRecord} | {Image: ImageAssetPublicRecord}
-}
+export type CreateAssetRequest = {
+	CreateAssetRequest_oneof:
+		| { Audio: AudioAssetData }
+		| { Image: ImageAssetData };
+};
 
-export interface GetAssetAdminRequest {
-    AssetID: String;
-}
+export type CreateAssetResponse = {
+	Record: AssetRecord;
+};
 
-export interface GetAssetAdminResponse {
-    Record: AssetRecord;
-}
+export type GetAssetRequest = {
+	AssetID: string;
+};
 
-export interface GetAssetByOldContentIDRequest {
-    OldAssetID: string;
-}
+export type GetAssetResponse = {
+	GetAssetResponse_oneof:
+		| { Audio: AudioAssetPublicRecord }
+		| { Image: ImageAssetPublicRecord };
+};
 
-export interface GetAssetByOldContentIDResponse {
-    Record: AssetRecord;
-}
+export type GetAssetAdminRequest = {
+	AssetID: String;
+};
 
-export interface GetListOfIDsRequest {}
+export type GetAssetAdminResponse = {
+	Record: AssetRecord;
+};
 
-export interface GetListOfIDsResponse {
-    AssetID: string;
-    ModifiedOnUTC: string;
-}
+export type GetAssetByOldContentIDRequest = {
+	OldAssetID: string;
+};
 
-export interface GetListOfOldContentIDsRequest {}
+export type GetAssetByOldContentIDResponse = {
+	Record: AssetRecord;
+};
 
-export interface GetListOfOldContentIDsResponse {
-    AssetID: string;
-    OldAssetID: string;
-    ModifiedOnUTC: string;
-}
+export type GetListOfIDsRequest = {};
 
-export interface SearchAssetRequest {
-    PageSize: number;
-    PageOffset: number;
-    Query: string;
-    AssetType: AssetType;
-}
+export type GetListOfIDsResponse = {
+	AssetID: string;
+	ModifiedOnUTC: string;
+};
 
-export interface SearchAssetResponse extends RecordResponse<AssetListRecord>{}
+export type GetListOfOldContentIDsRequest = {};
+
+export type GetListOfOldContentIDsResponse = {
+	AssetID: string;
+	OldAssetID: string;
+	ModifiedOnUTC: string;
+};
+
+export type SearchAssetRequest = {
+	PageSize: number;
+	PageOffset: number;
+	Query: string;
+	AssetType: AssetType;
+};
+
+export type SearchAssetResponse = RecordResponse<AssetListRecord>;
