@@ -1,10 +1,10 @@
 # InvertedJS
 
+Main Project: https://github.com/invertedtech
+
 ## Provides an Interface to interact with an Inverted Tech backend in reactjs
 
-### Usage
-
-#### Installation
+### Installation:
 
 ```
 npm install invertedtech
@@ -15,6 +15,8 @@ or
 ```
 yarn add invertedtech
 ```
+
+### Usage:
 
 #### js
 
