@@ -13,8 +13,6 @@
   "license": "ISC",
   "description": "Library for interacting with the InvertedTech backend from a nodejs environment",
   "dependencies": {
-    "@types/axios": "^0.9.36",
-    "@types/react": "^19.0.1",
     "axios": "^1.7.9",
     "react": "^19.0.0",
     "typescript": "^5.7.2"
@@ -26,7 +24,9 @@
     "jest": "^29.7.0",
     "rollup": "^4.28.1",
     "rollup-plugin-typescript2": "^0.36.0",
-    "ts-jest": "^29.2.5"
+    "ts-jest": "^29.2.5",
+    "@types/axios": "^0.9.36",
+    "@types/react": "^19.0.1"
   },
   "files": [
     "dist/"
