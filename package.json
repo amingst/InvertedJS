@@ -11,7 +11,8 @@
 		"build": "tsup",
 		"test": "npx jest",
 		"docs": "npx typedoc --entryPointStrategy Expand src",
-		"lint": "tsc"
+		"lint": "tsc",
+		"release": "pnpm run build && changeset publish"
 	},
 	"author": "Andrew Mingst <github:amingst>",
 	"license": "MIT",
