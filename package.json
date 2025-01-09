@@ -19,6 +19,7 @@
 	"description": "Library for interacting with the InvertedTech backend from a nodejs environment",
 	"dependencies": {
 		"axios": "^1.7.9",
+		"pnpm": "^9.15.3",
 		"react": "^19.0.0"
 	},
 	"devDependencies": {
