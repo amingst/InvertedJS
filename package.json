@@ -1,5 +1,5 @@
 {
-	"name": "invertedtech",
+	"name": "@invertedtech/invertedjs",
 	"version": "0.2.0",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
